@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Chrome Docker
+Exec=google-chrome-docker.sh
+StartupNotify=true
+Terminal=false
+Icon=google-chrome
+Type=Application
+Categories=Network;WebBrowser;
+Comment[es_VE]=Accede a Internet con docker
+GenericName=Navegador web

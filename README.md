@@ -41,6 +41,8 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 En éste experimento podemos observar como podemos ejecutar aplicaciones gráficas de linux usando contenedores para limitar el acceso a recursos del sistema.
 
+La ventaja de éste enfoque es que los programas están actualizadas, sólo se necesita una imagen para ejecutar el contenedor, no es necesario descargar imágenes de otros programadores que tienen todo empaquetado y de dudosa procedencia.
+
 Está probado en ubuntu 16.04 y 18.04, me gustaría si pueden probarlo en otras distribuciones para incorporar los scripts.
 
 

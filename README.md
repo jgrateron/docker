@@ -75,4 +75,14 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
+# Conclusiones
+
+En éste experimento podemos observar como podemos ejecutar aplicaciones gráficas de
+
+linux usando contenedores para limitar el acceso a recursos del sistema.
+
+Está probado en ubuntu 16.04 y 18.04, me gustaría si pueden probarlo en otras
+
+distribuciones para incorporar los scripts.
+
 

@@ -1,88 +1,46 @@
 # docker
 
-Scripts para ejecutar aplicaciones dentro de contenedores
+Scripts para ejecutar aplicaciones gráficas de linux dentro de contenedores.
 
-En éste enfoque no descago una imágen e instalo las aplicaciones,
-
-utilizo los programas instalados en su propia máquina pero los 
-
-ejecuto dentro de un contenedor con la imagen del sistema operativo, 
-
-así se limita al acceso a ciertas carpetas y/o recursos del sistema.
+En éste enfoque no descago una imágen e instalo las aplicaciones, utilizo los programas instalados en su propia máquina pero los ejecuto dentro de un contenedor con la imagen del sistema operativo, así se limita al acceso a ciertas carpetas y/o recursos del sistema.
 
 # google-chrome-docker
 
-En este script se ejecuta google-chome dentro de un container,
+En este script se ejecuta google-chome dentro de un container, se asume que en la máquina host el navegador está instalado en /opt/google y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
 
-se asume que en la máquina host el navegador está instalado en /opt/google
+Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
-y se debe cambiar la variable version por el valor actual de la distribución
-
-de ubuntu que está ejecutando.
-
-Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal
-
-El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
-
-en la carpeta ~/.local/share/applications para que aparezca en el menú.
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
 
 # chromium-docker
 
-En este script se ejecuta chromium dentro de un container,
+En este script se ejecuta chromium dentro de un container, se asume que en la máquina host el navegador está instalado en /usr y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
 
-se asume que en la máquina host el navegador está instalado en /usr
+Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
-y se debe cambiar la variable version por el valor actual de la distribución
-
-de ubuntu que está ejecutando.
-
-Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal
-
-El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
-
-en la carpeta ~/.local/share/applications para que aparezca en el menú.
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
 # firefox-docker
 
-En este script se ejecuta firefox dentro de un container,
+En este script se ejecuta firefox dentro de un container, se asume que en la máquina host el navegador está instalado en /usr y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
 
-se asume que en la máquina host el navegador está instalado en /usr
+Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
-y se debe cambiar la variable version por el valor actual de la distribución
-
-de ubuntu que está ejecutando.
-
-Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal
-
-El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
-
-en la carpeta ~/.local/share/applications para que aparezca en el menú.
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
 # wps-docker
 
-WPS Office es una excelente herramienta para trabajar con documentos de word, excel y powerpoint,
+WPS Office es una excelente herramienta para trabajar con documentos de word, excel y powerpoint, me gusta más que libreoffice ya que tiene mejor compatibilidad y estabilidad.
 
-me gusta más que libreoffice ya que tiene mejor compatibilidad y estabilidad.
+Lo coloco en un container para que las aplicaciones no tengan acceso a internet, y se puede ajustar para limitar la carpeta HOME, por defecto está compartido en su totalidad pero como uno tiene esos documentos por todos lados entonces se agrego permiso a todo el directorio home.
 
-Lo coloco en un container para que las aplicaciones no tengan acceso a internet, y se puede ajustar 
-
-para limitar la carpeta HOME, por defecto está compartido en su totalidad pero como uno tiene esos
-
-documentos por todos lados entonces se agrego permiso a todo el directorio home.
-
-El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
-
-en la carpeta ~/.local/share/applications para que aparezca en el menú.
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
 # Conclusiones
 
-En éste experimento podemos observar como podemos ejecutar aplicaciones gráficas de
+En éste experimento podemos observar como podemos ejecutar aplicaciones gráficas de linux usando contenedores para limitar el acceso a recursos del sistema.
 
-linux usando contenedores para limitar el acceso a recursos del sistema.
-
-Está probado en ubuntu 16.04 y 18.04, me gustaría si pueden probarlo en otras
-
-distribuciones para incorporar los scripts.
+Está probado en ubuntu 16.04 y 18.04, me gustaría si pueden probarlo en otras distribuciones para incorporar los scripts.
 
 

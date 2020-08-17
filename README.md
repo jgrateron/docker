@@ -42,5 +42,20 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
+# wps-docker
+
+WPS Office es una excelente herramienta para trabajar con documentos de word, excel y powerpoint,
+
+me gusta más que libreoffice ya que tiene mejor compatibilidad y estabilidad.
+
+Lo coloco en un container para que las aplicaciones no tengan acceso a internet, y se puede ajustar 
+
+para limitar la carpeta HOME, por defecto está compartido en su totalidad pero como uno tiene esos
+
+documentos por todos lados entonces se agrego permiso a todo el directorio home.
+
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
+
+en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
 

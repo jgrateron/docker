@@ -26,6 +26,23 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 en la carpeta ~/.local/share/applications para que aparezca en el menú.
 
+
+# chromium-docker
+
+En este script se ejecuta chromium dentro de un container,
+
+se asume que en la máquina host el navegador está instalado en /usr
+
+y se debe cambiar la variable version por el valor actual de la distribución
+
+de ubuntu que está ejecutando.
+
+Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal
+
+El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicaciones
+
+en la carpeta ~/.local/share/applications para que aparezca en el menú.
+
 # firefox-docker
 
 En este script se ejecuta firefox dentro de un container,

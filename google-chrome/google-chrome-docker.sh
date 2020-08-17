@@ -1,7 +1,6 @@
 DIRECTORIO=`mktemp -d`
 VERSION="16.04"
 docker run -d --rm --net host --user 1000:1000 \
-		-it \
 		-v /usr:/usr:ro \
 		-v /var:/var:ro \
 		-v /etc:/etc:ro \

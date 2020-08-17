@@ -8,7 +8,7 @@ docker run -d --rm --net host --user 1000:1000 \
 		-v /lib:/lib:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-v "${DIRECTORIO}":"${HOME}" \
-		-v "${HOME}/Descargas":"${HOME}/Descargas" \
+		-v "${HOME}/Descargas":"${HOME}/Downloads" \
 		-v /opt/google:/opt/google \
 		-e "DISPLAY=unix${DISPLAY}" \
 		-e LANG="${LANG}" \

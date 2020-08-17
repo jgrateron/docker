@@ -6,9 +6,9 @@ En éste enfoque no descago una imágen e instalo las aplicaciones,
 
 utilizo los programas instalados en su propia máquina pero los 
 
-ejecuto dentro de un contenedor, así se limita al acceso a ciertas
+ejecuto dentro de un contenedor con la imagen del sistema operativo, 
 
-carpetas y/o recursos del sistema
+así se limita al acceso a ciertas carpetas y/o recursos del sistema.
 
 # google-chrome-docker
 

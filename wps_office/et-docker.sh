@@ -1,15 +1,16 @@
-VERSION="16.04"
 docker run -d --rm --net none --user 1000:1000 \
+		-v /bin:/bin:ro \
 		-v /usr:/usr:ro \
 		-v /var:/var:ro \
 		-v /etc:/etc:ro \
 		-v /lib:/lib:ro \
+		-v /lib64:/lib64:ro \
+		-v /opt:/opt:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-v "${HOME}":"${HOME}" \
-		-v /opt/kingsoft:/opt/kingsoft \
 		-e "DISPLAY=unix${DISPLAY}" \
 		-e LANG="${LANG}" \
 		-e GDK_SCALE \
 		-e GDK_DPI_SCALE \
-		ubuntu:${VERSION} /usr/bin/et "$1"
+		alpine:3.12 /usr/bin/et "$1"
 

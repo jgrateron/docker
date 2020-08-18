@@ -1,12 +1,45 @@
 # docker
 
-Scripts para ejecutar aplicaciones gráficas de linux dentro de contenedores.
+Run GUI applications in Docker
 
-En éste enfoque no descago una imágen e instalo las aplicaciones, utilizo los programas instalados en su propia máquina pero los ejecuto dentro de un contenedor con la imagen del sistema operativo, así se limita al acceso a ciertas carpetas y/o recursos del sistema.
+Ejecutar aplicaciones gráficas de linux en Dockers.
+
+En éste enfoque no descago una imagen e instalo las aplicaciones, utilizo los programas instalados en su propia máquina pero los ejecuto dentro de un contenedor con la imagen alpine, así se limita al acceso a ciertas carpetas y/o recursos del sistema.
+
+Como se logra ésto?
+
+Ejecuto una imagen Alpine y comparto todas las carpetas del sistema en el contenedor y luego ejecuto el programa.
+
+``
+docker run -d --rm --net host --user 1000:1000 \
+		-v /bin:/bin:ro \
+		-v /usr:/usr:ro \
+		-v /var:/var:ro \
+		-v /etc:/etc:ro \
+		-v /lib:/lib:ro \
+		-v /lib64:/lib64:ro \
+		-v /opt:/opt:ro \
+		-v /tmp/.X11-unix:/tmp/.X11-unix \
+		-v "${DIRECTORIO}":"${HOME}" \
+		-e "DISPLAY=unix${DISPLAY}" \
+		-e LANG="${LANG}" \
+		-e GDK_SCALE \
+		-e GDK_DPI_SCALE \
+		-v /dev/shm:/dev/shm \
+		--privileged \
+		--device /dev/snd \
+		--device /dev/dri \
+		--device /dev/video0 \
+		--device /dev/usb \
+		--device /dev/bus/usb \
+		--group-add audio \
+		--group-add video \
+		alpine:3.12 /usr/bin/google-chrome 
+``
 
 # google-chrome-docker
 
-En este script se ejecuta google-chome dentro de un container, se asume que en la máquina host el navegador está instalado en /opt/google y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
+En este script se ejecuta google-chome dentro de un container.
 
 Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
@@ -15,7 +48,7 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 # chromium-docker
 
-En este script se ejecuta chromium dentro de un container, se asume que en la máquina host el navegador está instalado en /usr y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
+En este script se ejecuta chromium dentro de un container.
 
 Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
@@ -23,7 +56,7 @@ El script se puede copiar a la carpeta /usr/local/bin y el lanzador de aplicacio
 
 # firefox-docker
 
-En este script se ejecuta firefox dentro de un container, se asume que en la máquina host el navegador está instalado en /usr y se debe cambiar la variable version por el valor actual de la distribución de ubuntu que está ejecutando.
+En este script se ejecuta firefox dentro de un container.
 
 Sólo se comparte la carpeta "Descargas" y la carpeta home del usuario es temporal.
 
@@ -43,6 +76,6 @@ En éste experimento podemos observar como podemos ejecutar aplicaciones gráfic
 
 La ventaja de éste enfoque es que los programas están actualizadas, sólo se necesita una imagen para ejecutar el contenedor, no es necesario descargar imágenes de otros programadores que tienen todo empaquetado y de dudosa procedencia.
 
-Está probado en ubuntu 16.04 y 18.04, me gustaría si pueden probarlo en otras distribuciones para incorporar los scripts.
+Está probado en ubuntu 16.04, 18.04, Raspbian OS, me gustaría si pueden probarlo en otras distribuciones para hacer ajustes en los scripts.
 
 

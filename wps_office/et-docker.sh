@@ -6,6 +6,7 @@ docker run -d --rm --net none --user 1000:1000 \
 		-v /lib:/lib:ro \
 		-v /lib64:/lib64:ro \
 		-v /opt:/opt:ro \
+		-v /var/run/cups:/var/run/cups:ro \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
 		-v "${HOME}":"${HOME}" \
 		-e "DISPLAY=unix${DISPLAY}" \

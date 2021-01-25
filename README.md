@@ -85,7 +85,7 @@ En éste experimento podemos observar como podemos ejecutar aplicaciones gráfic
 
 La ventaja de éste enfoque es que los programas están actualizadas, sólo se necesita una imagen para ejecutar el contenedor, no es necesario descargar imágenes de otros programadores que tienen todo empaquetado y de dudosa procedencia.
 
-Está probado en ubuntu 16.04, 18.04, Raspbian OS, me gustaría si pueden probarlo en otras distribuciones para hacer ajustes en los scripts.
+Está probado en ubuntu 16.04, 18.04, 20.10 y Raspbian OS, me gustaría si pueden probarlo en otras distribuciones para hacer ajustes en los scripts.
 
 # Comentarios y sugerencias
 

@@ -51,9 +51,9 @@ Hay 4 niveles de ejecución
 
 - Nivel 2: se ejecuta el navegador pero sólo se comparte los directorios Desktop y Downloads.
 
-- Nivel 3: se ejecuta el navedador, se comparten los directorios Desktop, Downloads y donde google-chrome guarda toda su configuración.
+- Nivel 3: se ejecuta el navegador, se comparten los directorios Desktop, Downloads y donde google-chrome guarda toda su configuración.
 
-- Nivel 4: se ejecuta el navedador, se comparten todo el directorio HOME.
+- Nivel 4: se ejecuta el navegador, se comparte todo el directorio HOME.
 
 # chromium-docker
 

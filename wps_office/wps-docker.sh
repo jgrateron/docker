@@ -1,4 +1,4 @@
-docker run -d --rm --net none --user 1000:1000 \
+docker run -m 1024m --memory-swap 1024m -d --rm --net none --user 1000:1000 \
 		-v /bin:/bin:ro \
 		-v /usr:/usr:ro \
 		-v /var:/var:ro \
